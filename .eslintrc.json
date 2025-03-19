@@ -1,0 +1,143 @@
+{
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "next/core-web-vitals",
+    "airbnb-typescript",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["simple-import-sort"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    // eslint
+    "react/no-unknown-property": ["warn", { "ignore": ["css"] }],
+    "import/no-unresolved": "off",
+    "no-use-before-define": "warn",
+    "no-param-reassign": "warn",
+    "no-shadow": "off",
+    "no-plusplus": "warn",
+    "camelcase": ["warn", { "properties": "never", "ignoreImports": true }],
+    "no-empty": "warn",
+    "no-template-curly-in-string": "warn",
+    "react/destructuring-assignment": "warn",
+    "curly": [2, "all"],
+
+    // eslint-plugin-react
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "always", "children": "never" }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/no-danger": "off",
+    "react/require-default-props": "warn",
+
+    // eslint-plugin-prettier
+    "prettier/prettier": ["error", { "printWidth": 100 }],
+    // eslint-plugin-react-hooks
+    "react-hooks/rules-of-hooks": "warn",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "useRecoilCallback"
+      }
+    ],
+    // eslint-plugin-jsx-a11y
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/control-has-associated-label": "warn",
+    "jsx-a11y/no-noninteractive-tabindex": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "jsx-a11y/no-autofocus": "warn",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref"]
+      }
+    ],
+    // @import
+    "import/prefer-default-export": "off",
+    // import/extensions
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    // global-require
+    "global-require": 1,
+    "import/no-dynamic-require": "warn",
+    // @next
+    "@next/next/no-img-element": "off",
+    // no-useless-escape
+    "no-useless-escape": "warn",
+    "jsx-a11y/label-has-associated-control": [
+      "warn",
+      {
+        "labelAttributes": ["htmlFor"]
+      }
+    ],
+    "react/no-unescaped-entities": "warn",
+    "no-await-in-loop": "warn",
+    "lines-between-class-members": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+
+    "class-methods-use-this": "off",
+
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      },
+      { "blankLine": "always", "prev": "directive", "next": "*" },
+      { "blankLine": "any", "prev": "directive", "next": "directive" }
+    ],
+    "no-fallthrough": "off",
+    "react/jsx-no-target-blank": "off",
+    "import/no-webpack-loader-syntax": "off",
+    "react/jsx-key": "error"
+  },
+  "parserOptions": {
+    "project": ["tsconfig.json"],
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "globals": {
+    "JSX": "readonly"
+  }
+}

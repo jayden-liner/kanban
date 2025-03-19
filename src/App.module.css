@@ -1,0 +1,29 @@
+.container {
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #0079bf;
+  padding: 20px;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.board {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
