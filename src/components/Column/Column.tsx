@@ -9,12 +9,8 @@ interface ColumnProps {
 }
 
 export const Column: React.FC<ColumnProps> = ({ column }: ColumnProps) => {
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
-  };
-
   return (
-    <div className={styles.column} onDragOver={handleDragOver}>
+    <div className={styles.column}>
       <div className={styles.header}>
         <h2 className={styles.title}>{column.title}</h2>
         <span className={styles.counter}>{column.tasks.length}</span>
