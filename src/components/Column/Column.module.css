@@ -55,3 +55,62 @@
   font-size: 16px;
   font-weight: bold;
 }
+
+.addTaskContainer {
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-top: 8px;
+}
+
+.taskInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 2px solid #dfe1e6;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.taskInput:focus {
+  border-color: #4c9aff;
+}
+
+.addTaskActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addTaskButton {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addTaskButton:hover {
+  background-color: #0065ff;
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: #6b778c;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: rgba(9, 30, 66, 0.08);
+}
